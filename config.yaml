@@ -483,7 +483,7 @@ decisions:
         configuration:
           enabled: false
 
-LLM - Backend model configuration
+# LLM - Backend model configuration
 providers:
   # Model configuration
   # param_size is used by confidence algorithm to sort models (smallest first)
