@@ -59,6 +59,30 @@ prompt_guard:
   use_cpu: true
   jailbreak_mapping_path: "models/mom-jailbreak-classifier/jailbreak_type_mapping.json"
 
+signals:
+  preferences:
+    - name: "complex_reasoning"
+      description: "Requires deep reasoning and analysis"
+      llm_endpoint: "host.docker.internal:8002"
+
+decisions:
+  - name: complex_reasoning_route
+    description: "Route queries needing deep reasoning"
+    priority: 10
+    rules:
+      operator: "AND"
+      conditions:
+        - type: "preference"
+          name: "complex_reasoning"
+    modelRefs:
+      - model: "llama3:8b"
+        use_reasoning: true
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          enabled: true
+          prompt: "You are a philosopher-scientist. Provide deep, nuanced analysis."
+
 # vLLM Endpoints Configuration
 # IMPORTANT: 'address' field must be a valid IP address (IPv4 or IPv6)
 # Supported formats: 127.0.0.1, 192.168.1.1, ::1, 2001:db8::1
@@ -173,7 +197,7 @@ decisions:
     rules:
       operator: "AND"
       conditions:
-        - type: "keyword_rules"
+        - type: "domain"
           name: "urgent_request"
     modelRefs:
       - model: "llama3:8b"
@@ -193,7 +217,7 @@ decisions:
     rules:
       operator: "AND"
       conditions:
-        - type: "keyword_rules"
+        - type: "domain"
           name: "sensitive_data"
     modelRefs:
       - model: "llama3:8b"

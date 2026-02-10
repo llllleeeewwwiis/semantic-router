@@ -1,0 +1,152 @@
+# ... 其他配置保持不变 ...
+
+# ============================================
+# 信号配置 - 关键修正！
+# ============================================
+signals:
+  # 关键词信号（正确格式）
+  keywords:
+    - name: "urgent_keywords"
+      operator: "OR"
+      keywords: ["urgent", "immediate", "asap"]
+      case_sensitive: false
+
+    - name: "sensitive_data_keywords"
+      operator: "AND"
+      keywords: ["SSN", "social security number", "credit card"]
+      case_sensitive: false
+
+    - name: "spam_keywords"
+      operator: "OR"
+      keywords: ["buy now", "free money"]
+      case_sensitive: false
+
+    - name: "regex_keywords"
+      operator: "OR"
+      keywords: ["user\\.name@domain\\.com", "C:\\Program Files\\\\"]
+      case_sensitive: false
+
+  # 域信号（用于 MMLU 分类器结果）
+  domains:
+    - name: "business"
+      description: "Business and management related queries"
+      mmlu_categories: ["business"]
+    - name: "law"
+      description: "Legal questions and law-related topics"
+      mmlu_categories: ["law"]
+    - name: "psychology"
+      description: "Psychology and mental health topics"
+      mmlu_categories: ["psychology"]
+    # ... 其他 domain 信号 ...
+    - name: "other"
+      description: "General knowledge and miscellaneous topics"
+      mmlu_categories: ["other"]
+
+# ============================================
+# 删除旧的 keyword_rules（已废弃）
+# ============================================
+# keyword_rules:  # ❌ 删除这个部分！
+#   - category: "urgent_request"
+#     ...
+
+# ============================================
+# 决策配置 - 关键修正！
+# ============================================
+decisions:
+  # 基于关键词的决策（高优先级）
+  - name: "urgent_request_decision"
+    description: "Urgent and time-sensitive requests"
+    priority: 150
+    rules:
+      operator: "OR"  # 只需匹配任一关键词
+      conditions:
+        - type: "keyword"  # ✅ 使用 keyword 类型！
+          name: "urgent_keywords"  # ✅ 引用 signals.keywords 中的 name
+    modelRefs:
+      - model: "llama3:8b"
+        use_reasoning: false
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          enabled: true
+          prompt: "You are a highly responsive assistant specialized in handling urgent requests. Prioritize speed and efficiency while maintaining accuracy."
+
+  - name: "sensitive_data_decision"
+    description: "Requests involving sensitive personal data"
+    priority: 150
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "keyword"  # ✅ 关键词类型
+          name: "sensitive_data_keywords"
+    modelRefs:
+      - model: "llama3:8b"
+        use_reasoning: false
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          enabled: true
+          prompt: "You are a security-conscious assistant specialized in handling sensitive data."
+      - type: "jailbreak"
+        configuration:
+          enabled: true
+          threshold: 0.6
+      - type: "pii"
+        configuration:
+          enabled: true
+          pii_types_allowed: []
+
+  - name: "spam_detection_decision"
+    description: "Potential spam or suspicious requests"
+    priority: 150
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "keyword"  # ✅ 关键词类型
+          name: "spam_keywords"
+    modelRefs:
+      - model: "llama3:8b"
+        use_reasoning: false
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          enabled: true
+          prompt: "You are a content moderation assistant. This request has been flagged as potential spam. Please verify the legitimacy of the request before proceeding."
+
+  # 基于 Domain 分类的决策（标准优先级）
+  - name: "business_decision"
+    description: "Business and management related queries"
+    priority: 100
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "domain"  # ✅ 使用 domain 类型匹配 MMLU 分类结果
+          name: "business"
+    modelRefs:
+      - model: "llama3:8b"
+        use_reasoning: false
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          enabled: true
+          prompt: "You are a senior business consultant..."
+
+  # ... 其他 domain 决策 ...
+
+  # 兜底决策
+  - name: "general_decision"
+    description: "General knowledge and miscellaneous topics"
+    priority: 50
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "domain"
+          name: "other"
+    modelRefs:
+      - model: "llama3:8b"
+        use_reasoning: false
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          enabled: true
+          prompt: "You are a helpful and knowledgeable assistant."
