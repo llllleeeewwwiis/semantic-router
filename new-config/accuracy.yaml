@@ -16,150 +16,234 @@ providers:
           weight: 1
   default_model: "qwen2.5:3b"
 
+# -------------------------
+# SIGNALS（关键优化）
+# -------------------------
 signals:
   preferences:
-    - name: "pref_stem"
-      description: "Mathematical proofs, physics principles, and structural engineering mechanics."
     - name: "pref_cs"
-      description: "Programming, software development, algorithms, and technical infrastructure."
-    - name: "pref_science"
-      description: "Biological systems, chemical reactions, and clinical health topics."
-    - name: "pref_humanities"
-      description: "Legal analysis, historical events, philosophy, and psychological behavior."
-    - name: "pref_business"
-      description: "Micro/Macro economics, business strategy, and financial markets."
-    - name: "pref_general"
-      description: "General queries that do not fit other preferences"
+      description: "Computer science theory, algorithms, data structures, complexity, and systems."
 
+    - name: "pref_stem"
+      description: "Mathematics, physics, and engineering calculations and principles."
+
+    - name: "pref_science"
+      description: "Biology, chemistry, and health sciences."
+
+    - name: "pref_humanities"
+      description: "History, law, philosophy, and psychology."
+
+    - name: "pref_business"
+      description: "Economics, finance, and business strategy."
+
+# -------------------------
+# DECISIONS（核心优化）
+# -------------------------
 decisions:
-  # --- 1. CS 路由 (核心修复) ---
+
+  # ===== 1. CS（重写，修复 0% recall）=====
   - name: "route_cs"
-    description: "Catch all coding, debugging, and systems architecture queries"
-    priority: 180 # 提升优先级，确保先拦截技术咨询
+    description: "Route to CS expert model for queries about computer science concepts, algorithms, data structures, and complexity."
+    priority: 200
     rules:
       operator: "OR"
       conditions:
         - type: "preference"
           name: "pref_cs"
+          threshold: 0.60
           examples:
-            - "How to fix a NullPointerException in Java?"
-            - "Write a Python function to sort a list of dictionaries."
-            - "Explain the difference between TCP and UDP."
-            - "What is a Docker container and how does it work?"
-            - "Explain the time complexity of a recursive binary search."
-            - "How to manage KV cache in large language model serving?"
-          threshold: 0.65 # 从 0.75 大幅下调，提升 Recall
+            # ===== Machine Learning / AI =====
+            - "What is the learning rate in gradient descent?"
+            - "Explain the Expectation-Maximization algorithm."
+            - "Is log sigma(x) concave or convex?"
+            - "Is ReLU a convex function?"
+            - "What is MAP estimation?"
+            - "What is maximum likelihood estimation?"
+
+            # ===== Probabilistic / Graphical Models =====
+            - "How to factorize joint probability P(A, B, C)?"
+            - "What is conditional probability P(A|B)?"
+            - "Explain Bayesian networks."
+            - "What is independence in probability?"
+            - "How to compute joint distributions?"
+
+            # ===== Programming Languages / Syntax =====
+            - "How does a conditional branch work in APL?"
+            - "What is the syntax of a loop in FORTRAN?"
+            - "Explain array indexing in programming languages."
+            - "What is a compiler?"
+            - "What is the difference between syntax and semantics?"
+
+            # ===== Systems / Networking =====
+            - "What is the use of Wireshark?"
+            - "What does netstat do?"
+            - "What is traceroute used for?"
+            - "What is DNS lookup?"
+            - "What is TCP dump?"
+
+            # ===== Program Analysis / Execution =====
+            - "What should a program do if a constraint is unsatisfiable?"
+            - "How to handle symbolic execution failure?"
+            - "What is constraint solving in programs?"
+
     modelRefs:
       - model: "qwen2.5:3b"
+
     plugins:
       - type: "system_prompt"
         configuration:
-          system_prompt: "You are an expert coder. Write clean, efficient code and explain logic clearly."
+          system_prompt: "You are a computer science expert. Focus on precise definitions, algorithms, and complexity."
 
-  # --- 2. STEM 路由 ---
+  # ===== 2. STEM =====
   - name: "route_stem"
-    description: "Hard sciences requiring rigorous calculation"
-    priority: 160
+    description: "Route to STEM expert model for queries about mathematics, physics, engineering, and scientific calculations."
+    priority: 180
     rules:
       operator: "OR"
       conditions:
         - type: "preference"
           name: "pref_stem"
+          threshold: 0.65
           examples:
             - "Solve for x: 2x^2 + 5x - 3 = 0."
-            - "What is the second law of thermodynamics?"
-            - "Calculate the derivative of ln(x) * e^x."
-            - "Explain the Bernoulli principle in fluid mechanics."
-            - "What is the resonance frequency of an RLC circuit?"
-          threshold: 0.68 # 略微下调，增强对 Engineering 的覆盖
+            - "What is the derivative of sin(x)?"
+            - "State Newton's second law."
+            - "What is Ohm's law?"
+            - "Calculate the integral of x^2."
+            - "What is the Pythagorean theorem?"
+            - "Define velocity and acceleration."
+            - "What is kinetic energy?"
+            - "Explain the law of conservation of energy."
+            - "What is the formula for force?"
+            - "What is the Laplace transform?"
+            - "Solve a system of linear equations."
+            - "What is a vector space?"
+            - "Explain torque in physics."
+            - "What is resonance in circuits?"
+
     modelRefs:
       - model: "qwen2.5:3b"
+
     plugins:
       - type: "system_prompt"
         configuration:
-          system_prompt: "You are a STEM expert. Focus on formulas, step-by-step reasoning, and LaTeX formatting."
+          system_prompt: "You are a STEM expert. Use formulas and step-by-step reasoning."
 
-  # --- 3. 商科路由 (精准打击) ---
-  - name: "route_business"
-    description: "Economics and corporate management"
-    priority: 160
-    rules:
-      operator: "OR"
-      conditions:
-        - type: "preference"
-          name: "pref_business"
-          examples:
-            - "What is the law of diminishing marginal utility?"
-            - "Explain the difference between fiscal policy and monetary policy."
-            - "How to conduct a PESTEL analysis for a new market entry?"
-            - "Explain the concept of opportunity cost with an example."
-            - "Analyze the supply and demand curve shifts under inflation."
-          threshold: 0.68 # 从 0.72 下调，防止流入 Humanities
-    modelRefs:
-      - model: "qwen2.5:3b"
-    plugins:
-      - type: "system_prompt"
-        configuration:
-          system_prompt: "You are a business and economics consultant. Use market logic and statistical intuition."
-
-  # --- 4. 人文社科路由 ---
-  - name: "route_humanities"
-    description: "Textual and behavioral analysis"
-    priority: 160
-    rules:
-      operator: "OR"
-      conditions:
-        - type: "preference"
-          name: "pref_humanities"
-          examples:
-            - "What were the consequences of the 19th amendment?" # Law/History
-            - "Discuss the concept of 'Utilitarianism' in ethics." # Philosophy
-            - "How does cognitive dissonance affect consumer behavior?" # Psychology
-            - "Analyze the theme of justice in Plato's Republic." # Philosophy
-            - "What is the legal definition of intellectual property?" # Law
-          threshold: 0.70 # 保持相对适中的阈值
-    modelRefs:
-      - model: "qwen2.5:3b"
-    plugins:
-      - type: "system_prompt"
-        configuration:
-          system_prompt: "You are a humanities scholar. Provide deep contextual analysis and nuanced reasoning."
-
-  # --- 5. 生命科学路由 (收紧控制) ---
+  # ===== 3. SCIENCE（生化医）=====
   - name: "route_science"
-    description: "Biological and chemical domain knowledge"
-    priority: 160
+    description: "Route to science expert model for queries about biology, chemistry, and health sciences."
+    priority: 170
     rules:
       operator: "OR"
       conditions:
         - type: "preference"
           name: "pref_science"
+          threshold: 0.75
           examples:
-            - "Explain the process of DNA replication."
-            - "What is the chemical formula for photosynthesis?"
-            - "What are the common side effects of antibiotics?"
-            - "How do enzymes lower activation energy?"
-            - "Describe the difference between mitosis and meiosis."
-          threshold: 0.74 # 调高阈值 (原 0.70)，减少其他分类的误入（降低 FP）
+            - "What is DNA replication?"
+            - "What is photosynthesis?"
+            - "What is the function of mitochondria?"
+            - "What is an enzyme?"
+            - "What is the pH scale?"
+            - "What is the structure of an atom?"
+            - "Define oxidation and reduction."
+            - "What is a chemical bond?"
+            - "What is the immune system?"
+            - "What causes genetic mutations?"
+            - "What is a protein?"
+            - "What is a cell membrane?"
+            - "Explain natural selection."
+            - "What is the periodic table?"
+            - "What is an antibiotic?"
+
     modelRefs:
       - model: "qwen2.5:3b"
+
     plugins:
       - type: "system_prompt"
         configuration:
-          system_prompt: "You are a life science expert. Focus on biological accuracy and chemical properties."
+          system_prompt: "You are a life science expert. Focus on biological and chemical accuracy."
 
-  # --- 6. 默认路由 (Fallback) ---
-  - name: "default-route"
-    description: "Fallback for general or ambiguous queries"
-    priority: 50
+  # ===== 4. BUSINESS =====
+  - name: "route_business"
+    description: "Route to business expert model for queries about economics, finance, and business strategy."
+    priority: 170
     rules:
       operator: "OR"
       conditions:
         - type: "preference"
-          name: "pref_general"
+          name: "pref_business"
+          threshold: 0.68
+          examples:
+            - "What is supply and demand?"
+            - "Define opportunity cost."
+            - "What is inflation?"
+            - "What is GDP?"
+            - "Explain marginal utility."
+            - "What is fiscal policy?"
+            - "What is monetary policy?"
+            - "What is elasticity in economics?"
+            - "What is a monopoly?"
+            - "What is a balance sheet?"
+            - "Define market equilibrium."
+            - "What is profit maximization?"
+            - "What is cost-benefit analysis?"
+            - "What is a recession?"
+            - "What is an investment portfolio?"
+
+    modelRefs:
+      - model: "qwen2.5:3b"
+
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are a business expert. Focus on economic reasoning and market principles."
+
+  # ===== 5. HUMANITIES（重写为 factual）=====
+  - name: "route_humanities"
+    description: "Route to humanities expert model for queries about history, law, philosophy, and psychology."
+    priority: 170
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "preference"
+          name: "pref_humanities"
+          threshold: 0.70
+          examples:
+            - "When did World War II end?"
+            - "Who was the first president of the United States?"
+            - "What is the definition of negligence in law?"
+            - "What is cognitive dissonance?"
+            - "Who wrote the Republic?"
+            - "What is the meaning of utilitarianism?"
+            - "What is the Magna Carta?"
+            - "What is the legal definition of contract?"
+            - "What is the French Revolution?"
+            - "What is behavioral psychology?"
+            - "Who was Napoleon?"
+            - "What is ethics?"
+            - "What is a constitution?"
+            - "What is social identity theory?"
+            - "What is jurisprudence?"
+
+    modelRefs:
+      - model: "qwen2.5:3b"
+
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are a humanities expert. Provide clear and context-aware explanations."
+
+  # ===== 6. DEFAULT（关键修复：无条件）=====
+  - name: "default-route"
+    description: "Default routing for general queries" # 补齐必填项
+    priority: 0
+    rules:
+      operator: "OR"
+      conditions: []   # ✅ 空条件 = 永远可匹配（最低优先级）
     modelRefs:
       - model: "qwen2.5:3b"
     plugins:
       - type: "system_prompt"
         configuration:
-          system_prompt: "You are a helpful general-purpose AI. If the query is ambiguous, ask for clarification."
+          system_prompt: "You are a helpful general AI assistant. Clarify ambiguous queries when needed."
