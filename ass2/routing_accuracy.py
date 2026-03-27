@@ -9,7 +9,7 @@ SUBJECT_TO_DECISION = {
     "math":             "route_stem",
     "physics":          "route_stem",
     "engineering":      "route_stem",
-    "computer_science": "route_cs",
+    "computer science": "route_cs",
     "biology":          "route_science",
     "chemistry":        "route_science",
     "health":           "route_science",
