@@ -1,0 +1,164 @@
+version: v0.2
+
+listeners:
+  - name: "http_server"
+    address: "0.0.0.0"
+    port: 8899
+    protocol: "http"
+
+providers:
+  models:
+    - name: "qwen2.5:3b"
+      endpoints:
+        - name: "endpoint1"
+          endpoint: "host.docker.internal:8002"
+          protocol: "http"
+          weight: 1
+  default_model: "qwen2.5:3b"
+
+signals:
+  preferences:
+    - name: "pref_stem"
+      description: "STEM reasoning including Math, Physics, and Engineering."
+    - name: "pref_cs"
+      description: "Computer science, coding, and systems infrastructure."
+    - name: "pref_science"
+      description: "Life sciences including Biology, Chemistry, and Health."
+    - name: "pref_humanities"
+      description: "Social sciences and humanities: Law, History, Philosophy, Psychology."
+    - name: "pref_business"
+      description: "Economics and Business management."
+    - name: "pref_general"
+      description: "General queries that do not fit other preferences"
+
+decisions:
+  # --- 1. STEM 推理群组 (Math, Physics, Engineering) ---
+  - name: "route_stem"
+    description: "Specialized in mathematical reasoning and physical laws"
+    priority: 160
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "preference"
+          name: "pref_stem"
+          examples:
+            - "Solve the integral of cos(x)^2 from 0 to pi." # Math
+            - "Calculate the tensor of inertia for a solid cylinder." # Physics
+            - "Design a feedback loop for a high-frequency amplifier." # Engineering
+            - "What is the stress-strain relationship in non-linear elastic materials?" # Engineering
+            - "Explain the derivation of the heat equation in three dimensions." # Math/Physics
+          threshold: 0.72
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are a specialist in STEM reasoning (Math/Physics). Reason step-by-step and provide rigorous proofs with LaTeX."
+
+  # --- 2. 计算机科学群组 (Computer Science) ---
+  - name: "route_cs"
+    description: "Specialized in coding and systems"
+    priority: 170 # 优先级略高，捕获代码需求
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "preference"
+          name: "pref_cs"
+          examples:
+            - "Implement a thread-safe singleton pattern in C++."
+            - "Explain the difference between optimistic and pessimistic locking in DB."
+            - "How to optimize KV cache in vLLM for high throughput?"
+            - "Write a Python script to scrape data from a REST API."
+            - "Explain the memory layout of a Linux process."
+          threshold: 0.75
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are an expert software engineer. Provide clean, efficient, and well-documented code."
+
+  # --- 3. 生命科学群组 (Biology, Chemistry, Health) ---
+  - name: "route_science"
+    description: "Specialized in natural and life sciences"
+    priority: 160
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "preference"
+          name: "pref_science"
+          examples:
+            - "Describe the primary structure of a protein molecule." # Biology
+            - "What are the stoichiometric coefficients for the combustion of methane?" # Chemistry
+            - "Explain the physiological effects of prolonged sleep deprivation." # Health
+            - "How does mRNA vaccine technology trigger an immune response?" # Biology/Health
+            - "What is the IUPAC name for this organic compound?" # Chemistry
+          threshold: 0.70
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are a science expert. Explain complex biological and chemical processes clearly and accurately."
+
+  # --- 4. 人文社科群组 (Law, History, Philosophy, Psychology) ---
+  - name: "route_humanities"
+    description: "Specialized in language understanding and social theory"
+    priority: 160
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "preference"
+          name: "pref_humanities"
+          examples:
+            - "Analyze the impact of the Magna Carta on modern constitutional law." # Law
+            - "Compare the industrialization of Britain and Meiji Japan." # History
+            - "Discuss the concept of 'original nature' in Mencius and Xunzi." # Philosophy
+            - "What are the defense mechanisms in Freudian psychoanalysis?" # Psychology
+            - "Explain the difference between deontological and teleological ethics." # Philosophy
+          threshold: 0.75
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are a scholar in humanities and social sciences. Provide deep, context-aware analysis and use nuanced language."
+
+  # --- 5. 商科群组 (Economics, Business) ---
+  - name: "route_business"
+    description: "Specialized in economic modeling and corporate strategy"
+    priority: 160
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "preference"
+          name: "pref_business"
+          examples:
+            - "How to identify heteroscedasticity in OLS regression using Stata?" # Economics
+            - "Explain the five forces framework for competitive analysis." # Business
+            - "Discuss the impact of interest rate hikes on consumer spending." # Economics
+            - "What are the common strategies for market entry in emerging economies?" # Business
+            - "Calculate the Weighted Average Cost of Capital (WACC)." # Business/Finance
+          threshold: 0.72
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are an expert in economics and business strategy. Focus on analytical rigor and market logic."
+
+  # --- 6. 默认路由 (Other) ---
+  - name: "default-route"
+    description: "General assistant for miscellaneous tasks"
+    priority: 50
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "preference"
+          name: "pref_general"
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are a helpful, general-purpose AI assistant."

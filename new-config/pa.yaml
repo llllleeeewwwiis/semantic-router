@@ -1,0 +1,169 @@
+version: v0.2
+
+listeners:
+  - name: "http_server"
+    address: "0.0.0.0"
+    port: 8899 
+    protocol: "http"
+
+providers:
+  models:
+    - name: "qwen2.5:3b"
+      endpoints:
+        - name: "endpoint1"
+          endpoint: "host.docker.internal:8002"
+          protocol: "http"
+          weight: 1
+
+  # external_models:
+  #   - role: "preference"
+  #     provider: "ollama"
+  #     endpoint: "localhost:8002"      
+  #     model_name: "111"               
+  #     timeout_seconds: 30
+  #     parser_type: "json"   
+
+  default_model: "qwen2.5:3b"
+
+signals:
+  keywords:
+    - name: "urgent_kws"
+      operator: "OR"
+      keywords: ["urgent", "immediate", "asap", "emergency"]
+      case_sensitive: false
+
+    - name: "sensitive_kws"
+      operator: "OR"
+      keywords: ["SSN", "social security", "credit card", "password"]
+      case_sensitive: false
+
+    - name: "spam_kws"
+      operator: "OR"
+      keywords: ["buy now", "free money", "click here"]
+      case_sensitive: false
+
+  preferences:
+    - name: "pref_code_gen"
+      description: "Writing code, scripts, software development, programming tasks"
+
+    - name: "pref_bug_fix"
+      description: "Debugging, fixing errors, resolving crashes, technical troubleshooting"
+
+    - name: "pref_code_review"
+      description: "Code optimization, best practices, reviewing pull requests"
+
+    - name: "pref_general"
+      description: "General queries that do not fit other preferences"
+
+decisions:
+  # Priority 300: 紧急请求
+  - name: "urgent_request"
+    description: "Urgent request handling based on keywords" # 补齐必填项
+    priority: 300
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "keyword"
+          name: "urgent_kws"
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are an emergency assistant. Focus on speed and immediate solutions."
+
+  # Priority 290: 敏感数据
+  - name: "sensitive_data"
+    description: "Sensitive information detection" # 补齐必填项
+    priority: 290
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "keyword"
+          name: "sensitive_kws"
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "Security Alert: Handle the following data with extreme caution."
+
+  # Priority 280: 垃圾过滤
+  - name: "filter_spam"
+    description: "Filter advertising or spam content" # 补齐必填项
+    priority: 280
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "keyword"
+          name: "spam_kws"
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "This message is identified as potential spam. Respond with a polite refusal."
+
+  # Priority 200: 代码生成
+  - name: "preference_code_generation"
+    description: "Writing code, scripts, software development, programming tasks" # 补齐必填项
+    priority: 200
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "preference"
+          name: "pref_code_gen"
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are an expert software developer. Write clean and efficient code."
+
+  # Priority 200: 调试修复
+  - name: "preference_bug_fixing"
+    description: "Debugging, fixing errors, resolving crashes, technical troubleshooting" # 补齐必填项
+    priority: 200
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "preference"
+          name: "pref_bug_fix"
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are a debugging specialist. Analyze logs and fix bugs step by step."
+
+  # Priority 200: 代码审查
+  - name: "preference_code_review"
+    description: "Code optimization, best practices, reviewing pull requests" # 补齐必填项
+    priority: 200
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "preference"
+          name: "pref_code_review"
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are a senior code reviewer. Check for logic errors and suggest optimizations."
+
+  # Priority 50: 默认路由
+  - name: "default-route"
+    description: "Default routing for general queries" # 补齐必填项
+    priority: 50
+    rules:
+      operator: "OR"
+      conditions: 
+        - type: "preference"
+          name: "pref_general"
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are a general-purpose AI assistant."

@@ -61,14 +61,14 @@ def docker_start_vllm_sr(
     )
     if runtime_container_config:
         env_vars.setdefault("VLLM_SR_RUNTIME_CONFIG_PATH", runtime_container_config)
-    _configure_openclaw_support(
-        cmd,
-        env_vars,
-        config_dir,
-        openclaw_network_name,
-        runtime,
-        stack_layout,
-    )
+    # _configure_openclaw_support(
+    #     cmd,
+    #     env_vars,
+    #     config_dir,
+    #     openclaw_network_name,
+    #     runtime,
+    #     stack_layout,
+    # )
 
     for key, value in env_vars.items():
         cmd.extend(["-e", f"{key}={value}"])
