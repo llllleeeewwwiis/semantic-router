@@ -19,22 +19,46 @@ providers:
 signals:
   preferences:
     - name: "pref_stem"
-      description: "STEM reasoning including Math, Physics, and Engineering."
+      description: "Mathematical proofs, physics principles, and structural engineering mechanics."
     - name: "pref_cs"
-      description: "Computer science, coding, and systems infrastructure."
+      description: "Programming, software development, algorithms, and technical infrastructure."
     - name: "pref_science"
-      description: "Life sciences including Biology, Chemistry, and Health."
+      description: "Biological systems, chemical reactions, and clinical health topics."
     - name: "pref_humanities"
-      description: "Social sciences and humanities: Law, History, Philosophy, Psychology."
+      description: "Legal analysis, historical events, philosophy, and psychological behavior."
     - name: "pref_business"
-      description: "Economics and Business management."
+      description: "Micro/Macro economics, business strategy, and financial markets."
     - name: "pref_general"
       description: "General queries that do not fit other preferences"
 
 decisions:
-  # --- 1. STEM 推理群组 (Math, Physics, Engineering) ---
+  # --- 1. CS 路由 (核心修复) ---
+  - name: "route_cs"
+    description: "Catch all coding, debugging, and systems architecture queries"
+    priority: 180 # 提升优先级，确保先拦截技术咨询
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "preference"
+          name: "pref_cs"
+          examples:
+            - "How to fix a NullPointerException in Java?"
+            - "Write a Python function to sort a list of dictionaries."
+            - "Explain the difference between TCP and UDP."
+            - "What is a Docker container and how does it work?"
+            - "Explain the time complexity of a recursive binary search."
+            - "How to manage KV cache in large language model serving?"
+          threshold: 0.65 # 从 0.75 大幅下调，提升 Recall
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are an expert coder. Write clean, efficient code and explain logic clearly."
+
+  # --- 2. STEM 路由 ---
   - name: "route_stem"
-    description: "Specialized in mathematical reasoning and physical laws"
+    description: "Hard sciences requiring rigorous calculation"
     priority: 160
     rules:
       operator: "OR"
@@ -42,91 +66,22 @@ decisions:
         - type: "preference"
           name: "pref_stem"
           examples:
-            - "Solve the integral of cos(x)^2 from 0 to pi." # Math
-            - "Calculate the tensor of inertia for a solid cylinder." # Physics
-            - "Design a feedback loop for a high-frequency amplifier." # Engineering
-            - "What is the stress-strain relationship in non-linear elastic materials?" # Engineering
-            - "Explain the derivation of the heat equation in three dimensions." # Math/Physics
-          threshold: 0.72
+            - "Solve for x: 2x^2 + 5x - 3 = 0."
+            - "What is the second law of thermodynamics?"
+            - "Calculate the derivative of ln(x) * e^x."
+            - "Explain the Bernoulli principle in fluid mechanics."
+            - "What is the resonance frequency of an RLC circuit?"
+          threshold: 0.68 # 略微下调，增强对 Engineering 的覆盖
     modelRefs:
       - model: "qwen2.5:3b"
     plugins:
       - type: "system_prompt"
         configuration:
-          system_prompt: "You are a specialist in STEM reasoning (Math/Physics). Reason step-by-step and provide rigorous proofs with LaTeX."
+          system_prompt: "You are a STEM expert. Focus on formulas, step-by-step reasoning, and LaTeX formatting."
 
-  # --- 2. 计算机科学群组 (Computer Science) ---
-  - name: "route_cs"
-    description: "Specialized in coding and systems"
-    priority: 170 # 优先级略高，捕获代码需求
-    rules:
-      operator: "OR"
-      conditions:
-        - type: "preference"
-          name: "pref_cs"
-          examples:
-            - "Implement a thread-safe singleton pattern in C++."
-            - "Explain the difference between optimistic and pessimistic locking in DB."
-            - "How to optimize KV cache in vLLM for high throughput?"
-            - "Write a Python script to scrape data from a REST API."
-            - "Explain the memory layout of a Linux process."
-          threshold: 0.75
-    modelRefs:
-      - model: "qwen2.5:3b"
-    plugins:
-      - type: "system_prompt"
-        configuration:
-          system_prompt: "You are an expert software engineer. Provide clean, efficient, and well-documented code."
-
-  # --- 3. 生命科学群组 (Biology, Chemistry, Health) ---
-  - name: "route_science"
-    description: "Specialized in natural and life sciences"
-    priority: 160
-    rules:
-      operator: "OR"
-      conditions:
-        - type: "preference"
-          name: "pref_science"
-          examples:
-            - "Describe the primary structure of a protein molecule." # Biology
-            - "What are the stoichiometric coefficients for the combustion of methane?" # Chemistry
-            - "Explain the physiological effects of prolonged sleep deprivation." # Health
-            - "How does mRNA vaccine technology trigger an immune response?" # Biology/Health
-            - "What is the IUPAC name for this organic compound?" # Chemistry
-          threshold: 0.70
-    modelRefs:
-      - model: "qwen2.5:3b"
-    plugins:
-      - type: "system_prompt"
-        configuration:
-          system_prompt: "You are a science expert. Explain complex biological and chemical processes clearly and accurately."
-
-  # --- 4. 人文社科群组 (Law, History, Philosophy, Psychology) ---
-  - name: "route_humanities"
-    description: "Specialized in language understanding and social theory"
-    priority: 160
-    rules:
-      operator: "OR"
-      conditions:
-        - type: "preference"
-          name: "pref_humanities"
-          examples:
-            - "Analyze the impact of the Magna Carta on modern constitutional law." # Law
-            - "Compare the industrialization of Britain and Meiji Japan." # History
-            - "Discuss the concept of 'original nature' in Mencius and Xunzi." # Philosophy
-            - "What are the defense mechanisms in Freudian psychoanalysis?" # Psychology
-            - "Explain the difference between deontological and teleological ethics." # Philosophy
-          threshold: 0.75
-    modelRefs:
-      - model: "qwen2.5:3b"
-    plugins:
-      - type: "system_prompt"
-        configuration:
-          system_prompt: "You are a scholar in humanities and social sciences. Provide deep, context-aware analysis and use nuanced language."
-
-  # --- 5. 商科群组 (Economics, Business) ---
+  # --- 3. 商科路由 (精准打击) ---
   - name: "route_business"
-    description: "Specialized in economic modeling and corporate strategy"
+    description: "Economics and corporate management"
     priority: 160
     rules:
       operator: "OR"
@@ -134,22 +89,68 @@ decisions:
         - type: "preference"
           name: "pref_business"
           examples:
-            - "How to identify heteroscedasticity in OLS regression using Stata?" # Economics
-            - "Explain the five forces framework for competitive analysis." # Business
-            - "Discuss the impact of interest rate hikes on consumer spending." # Economics
-            - "What are the common strategies for market entry in emerging economies?" # Business
-            - "Calculate the Weighted Average Cost of Capital (WACC)." # Business/Finance
-          threshold: 0.72
+            - "What is the law of diminishing marginal utility?"
+            - "Explain the difference between fiscal policy and monetary policy."
+            - "How to conduct a PESTEL analysis for a new market entry?"
+            - "Explain the concept of opportunity cost with an example."
+            - "Analyze the supply and demand curve shifts under inflation."
+          threshold: 0.68 # 从 0.72 下调，防止流入 Humanities
     modelRefs:
       - model: "qwen2.5:3b"
     plugins:
       - type: "system_prompt"
         configuration:
-          system_prompt: "You are an expert in economics and business strategy. Focus on analytical rigor and market logic."
+          system_prompt: "You are a business and economics consultant. Use market logic and statistical intuition."
 
-  # --- 6. 默认路由 (Other) ---
+  # --- 4. 人文社科路由 ---
+  - name: "route_humanities"
+    description: "Textual and behavioral analysis"
+    priority: 160
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "preference"
+          name: "pref_humanities"
+          examples:
+            - "What were the consequences of the 19th amendment?" # Law/History
+            - "Discuss the concept of 'Utilitarianism' in ethics." # Philosophy
+            - "How does cognitive dissonance affect consumer behavior?" # Psychology
+            - "Analyze the theme of justice in Plato's Republic." # Philosophy
+            - "What is the legal definition of intellectual property?" # Law
+          threshold: 0.70 # 保持相对适中的阈值
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are a humanities scholar. Provide deep contextual analysis and nuanced reasoning."
+
+  # --- 5. 生命科学路由 (收紧控制) ---
+  - name: "route_science"
+    description: "Biological and chemical domain knowledge"
+    priority: 160
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "preference"
+          name: "pref_science"
+          examples:
+            - "Explain the process of DNA replication."
+            - "What is the chemical formula for photosynthesis?"
+            - "What are the common side effects of antibiotics?"
+            - "How do enzymes lower activation energy?"
+            - "Describe the difference between mitosis and meiosis."
+          threshold: 0.74 # 调高阈值 (原 0.70)，减少其他分类的误入（降低 FP）
+    modelRefs:
+      - model: "qwen2.5:3b"
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are a life science expert. Focus on biological accuracy and chemical properties."
+
+  # --- 6. 默认路由 (Fallback) ---
   - name: "default-route"
-    description: "General assistant for miscellaneous tasks"
+    description: "Fallback for general or ambiguous queries"
     priority: 50
     rules:
       operator: "OR"
@@ -161,4 +162,4 @@ decisions:
     plugins:
       - type: "system_prompt"
         configuration:
-          system_prompt: "You are a helpful, general-purpose AI assistant."
+          system_prompt: "You are a helpful general-purpose AI. If the query is ambiguous, ask for clarification."
