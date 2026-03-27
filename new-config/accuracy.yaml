@@ -23,35 +23,7 @@ signals:
   preferences:
     - name: "pref_cs"
       description: "Computer science theory, algorithms, data structures, complexity, and systems."
-
-    - name: "pref_stem"
-      description: "Mathematics, physics, and engineering calculations and principles."
-
-    - name: "pref_science"
-      description: "Biology, chemistry, and health sciences."
-
-    - name: "pref_humanities"
-      description: "History, law, philosophy, and psychology."
-
-    - name: "pref_business"
-      description: "Economics, finance, and business strategy."
-
-# -------------------------
-# DECISIONS（核心优化）
-# -------------------------
-decisions:
-
-  # ===== 1. CS（重写，修复 0% recall）=====
-  - name: "route_cs"
-    description: "Route to CS expert model for queries about computer science concepts, algorithms, data structures, and complexity."
-    priority: 200
-    rules:
-      operator: "OR"
-      conditions:
-        - type: "preference"
-          name: "pref_cs"
-          threshold: 0.60
-          examples:
+      examples:
             # ===== Machine Learning / AI =====
             - "What is the learning rate in gradient descent?"
             - "Explain the Expectation-Maximization algorithm."
@@ -85,6 +57,102 @@ decisions:
             - "What should a program do if a constraint is unsatisfiable?"
             - "How to handle symbolic execution failure?"
             - "What is constraint solving in programs?"
+      threshold: 0.50
+
+    - name: "pref_stem"
+      description: "Mathematics, physics, and engineering calculations and principles."
+      examples:
+            - "Solve for x: 2x^2 + 5x - 3 = 0."
+            - "What is the derivative of sin(x)?"
+            - "State Newton's second law."
+            - "What is Ohm's law?"
+            - "Calculate the integral of x^2."
+            - "What is the Pythagorean theorem?"
+            - "Define velocity and acceleration."
+            - "What is kinetic energy?"
+            - "Explain the law of conservation of energy."
+            - "What is the formula for force?"
+            - "What is the Laplace transform?"
+            - "Solve a system of linear equations."
+            - "What is a vector space?"
+            - "Explain torque in physics."
+            - "What is resonance in circuits?"
+      threshold: 0.50
+
+    - name: "pref_science"
+      description: "Biology, chemistry, and health sciences."
+      examples:
+            - "What is DNA replication?"
+            - "What is photosynthesis?"
+            - "What is the function of mitochondria?"
+            - "What is an enzyme?"
+            - "What is the pH scale?"
+            - "What is the structure of an atom?"
+            - "Define oxidation and reduction."
+            - "What is a chemical bond?"
+            - "What is the immune system?"
+            - "What causes genetic mutations?"
+            - "What is a protein?"
+            - "What is a cell membrane?"
+            - "Explain natural selection."
+            - "What is the periodic table?"
+            - "What is an antibiotic?"
+      threshold: 0.50
+
+    - name: "pref_business"
+      description: "Economics, finance, and business strategy."
+      examples:
+            - "What is supply and demand?"
+            - "Define opportunity cost."
+            - "What is inflation?"
+            - "What is GDP?"
+            - "Explain marginal utility."
+            - "What is fiscal policy?"
+            - "What is monetary policy?"
+            - "What is elasticity in economics?"
+            - "What is a monopoly?"
+            - "What is a balance sheet?"
+            - "Define market equilibrium."
+            - "What is profit maximization?"
+            - "What is cost-benefit analysis?"
+            - "What is a recession?"
+            - "What is an investment portfolio?"
+      threshold: 0.50
+
+    - name: "pref_humanities"
+      description: "History, law, philosophy, and psychology."
+      examples:
+            - "When did World War II end?"
+            - "Who was the first president of the United States?"
+            - "What is the definition of negligence in law?"
+            - "What is cognitive dissonance?"
+            - "Who wrote the Republic?"
+            - "What is the meaning of utilitarianism?"
+            - "What is the Magna Carta?"
+            - "What is the legal definition of contract?"
+            - "What is the French Revolution?"
+            - "What is behavioral psychology?"
+            - "Who was Napoleon?"
+            - "What is ethics?"
+            - "What is a constitution?"
+            - "What is social identity theory?"
+            - "What is jurisprudence?"
+      threshold: 0.50
+
+# -------------------------
+# DECISIONS（核心优化）
+# -------------------------
+decisions:
+
+  # ===== 1. CS（重写，修复 0% recall）=====
+  - name: "route_cs"
+    description: "Route to CS expert model for queries about computer science concepts, algorithms, data structures, and complexity."
+    priority: 200
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "preference"
+          name: "pref_cs"
 
     modelRefs:
       - model: "qwen2.5:3b"
@@ -103,23 +171,6 @@ decisions:
       conditions:
         - type: "preference"
           name: "pref_stem"
-          threshold: 0.65
-          examples:
-            - "Solve for x: 2x^2 + 5x - 3 = 0."
-            - "What is the derivative of sin(x)?"
-            - "State Newton's second law."
-            - "What is Ohm's law?"
-            - "Calculate the integral of x^2."
-            - "What is the Pythagorean theorem?"
-            - "Define velocity and acceleration."
-            - "What is kinetic energy?"
-            - "Explain the law of conservation of energy."
-            - "What is the formula for force?"
-            - "What is the Laplace transform?"
-            - "Solve a system of linear equations."
-            - "What is a vector space?"
-            - "Explain torque in physics."
-            - "What is resonance in circuits?"
 
     modelRefs:
       - model: "qwen2.5:3b"
@@ -138,23 +189,6 @@ decisions:
       conditions:
         - type: "preference"
           name: "pref_science"
-          threshold: 0.75
-          examples:
-            - "What is DNA replication?"
-            - "What is photosynthesis?"
-            - "What is the function of mitochondria?"
-            - "What is an enzyme?"
-            - "What is the pH scale?"
-            - "What is the structure of an atom?"
-            - "Define oxidation and reduction."
-            - "What is a chemical bond?"
-            - "What is the immune system?"
-            - "What causes genetic mutations?"
-            - "What is a protein?"
-            - "What is a cell membrane?"
-            - "Explain natural selection."
-            - "What is the periodic table?"
-            - "What is an antibiotic?"
 
     modelRefs:
       - model: "qwen2.5:3b"
@@ -173,23 +207,6 @@ decisions:
       conditions:
         - type: "preference"
           name: "pref_business"
-          threshold: 0.68
-          examples:
-            - "What is supply and demand?"
-            - "Define opportunity cost."
-            - "What is inflation?"
-            - "What is GDP?"
-            - "Explain marginal utility."
-            - "What is fiscal policy?"
-            - "What is monetary policy?"
-            - "What is elasticity in economics?"
-            - "What is a monopoly?"
-            - "What is a balance sheet?"
-            - "Define market equilibrium."
-            - "What is profit maximization?"
-            - "What is cost-benefit analysis?"
-            - "What is a recession?"
-            - "What is an investment portfolio?"
 
     modelRefs:
       - model: "qwen2.5:3b"
@@ -208,23 +225,6 @@ decisions:
       conditions:
         - type: "preference"
           name: "pref_humanities"
-          threshold: 0.70
-          examples:
-            - "When did World War II end?"
-            - "Who was the first president of the United States?"
-            - "What is the definition of negligence in law?"
-            - "What is cognitive dissonance?"
-            - "Who wrote the Republic?"
-            - "What is the meaning of utilitarianism?"
-            - "What is the Magna Carta?"
-            - "What is the legal definition of contract?"
-            - "What is the French Revolution?"
-            - "What is behavioral psychology?"
-            - "Who was Napoleon?"
-            - "What is ethics?"
-            - "What is a constitution?"
-            - "What is social identity theory?"
-            - "What is jurisprudence?"
 
     modelRefs:
       - model: "qwen2.5:3b"

@@ -1,0 +1,3782 @@
+[
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 4138.141625007847,
+    "question_id": 731,
+    "answer": "D"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1192.6700829935726,
+    "question_id": 185,
+    "answer": "B"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 2559.784375014715,
+    "question_id": 95,
+    "answer": "J"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 728.0848329828586,
+    "question_id": 836,
+    "answer": "E"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 907.581208011834,
+    "question_id": 353,
+    "answer": "B"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 835.0430419959594,
+    "question_id": 322,
+    "answer": "F"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1295.4850000096485,
+    "question_id": 300,
+    "answer": "H"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1095.1352920092177,
+    "question_id": 213,
+    "answer": "H"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 564.3221249920316,
+    "question_id": 831,
+    "answer": "B"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1102.451916987775,
+    "question_id": 175,
+    "answer": "J"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1053.7788750079926,
+    "question_id": 769,
+    "answer": "J"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1471.5533749840688,
+    "question_id": 835,
+    "answer": "J"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 553.7376669817604,
+    "question_id": 633,
+    "answer": "I"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 826.4537500217557,
+    "question_id": 160,
+    "answer": "J"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 1614.7800420003477,
+    "question_id": 680,
+    "answer": "I"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 834.157083008904,
+    "question_id": 506,
+    "answer": "I"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 2542.3205419792794,
+    "question_id": 102,
+    "answer": "J"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 1064.0359170211013,
+    "question_id": 100,
+    "answer": "E"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1440.5750000150874,
+    "question_id": 166,
+    "answer": "B"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 444.16775001445785,
+    "question_id": 295,
+    "answer": "A"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 799.4775420229416,
+    "question_id": 310,
+    "answer": "C"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 490.48900001798756,
+    "question_id": 592,
+    "answer": "G"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_stem",
+    "correct": false,
+    "latency_ms": 625.8678750018589,
+    "question_id": 693,
+    "answer": "H"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_stem",
+    "correct": false,
+    "latency_ms": 829.4335840037093,
+    "question_id": 97,
+    "answer": "F"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 2542.147833999479,
+    "question_id": 650,
+    "answer": "B"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 936.6392499941867,
+    "question_id": 275,
+    "answer": "C"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 989.1585829900578,
+    "question_id": 810,
+    "answer": "C"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 833.8870830193628,
+    "question_id": 742,
+    "answer": "C"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 944.7345000226051,
+    "question_id": 795,
+    "answer": "D"
+  },
+  {
+    "category": "business",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 652.4834999872837,
+    "question_id": 503,
+    "answer": "C"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 1458.70170800481,
+    "question_id": 1324,
+    "answer": "B"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2956.1882090056315,
+    "question_id": 1803,
+    "answer": "J"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2784.189375001006,
+    "question_id": 1448,
+    "answer": "F"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2602.468333003344,
+    "question_id": 879,
+    "answer": "A"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 877.4139170127455,
+    "question_id": 1198,
+    "answer": "B"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2633.306708012242,
+    "question_id": 1749,
+    "answer": "B"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1130.005707993405,
+    "question_id": 1576,
+    "answer": "J"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2225.5219589860644,
+    "question_id": 1190,
+    "answer": "E"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2045.9964160108939,
+    "question_id": 1313,
+    "answer": "H"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 6637.247999984538,
+    "question_id": 1569,
+    "answer": "A"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 3987.1520409942605,
+    "question_id": 1078,
+    "answer": "B"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1417.2518330160528,
+    "question_id": 1058,
+    "answer": "I"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 524.3536669877358,
+    "question_id": 1660,
+    "answer": "G"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 1203.5002920019906,
+    "question_id": 1067,
+    "answer": "J"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1671.8918749829754,
+    "question_id": 1616,
+    "answer": "H"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 2146.3727919908706,
+    "question_id": 1585,
+    "answer": "C"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2319.5799159875605,
+    "question_id": 1419,
+    "answer": "F"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2650.5582500249147,
+    "question_id": 954,
+    "answer": "E"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1825.2357089950237,
+    "question_id": 1824,
+    "answer": "B"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1625.9708339930512,
+    "question_id": 1983,
+    "answer": "I"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1094.8895830078982,
+    "question_id": 1125,
+    "answer": "G"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 2788.7822500197217,
+    "question_id": 1657,
+    "answer": "H"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 1180.7097920100205,
+    "question_id": 1030,
+    "answer": "D"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1990.2398750127759,
+    "question_id": 1480,
+    "answer": "I"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 4107.317374990089,
+    "question_id": 1621,
+    "answer": "G"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2603.315874992404,
+    "question_id": 1266,
+    "answer": "C"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1565.5072499939706,
+    "question_id": 1010,
+    "answer": "E"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2190.9671659814194,
+    "question_id": 959,
+    "answer": "A"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 1866.599959001178,
+    "question_id": 1339,
+    "answer": "A"
+  },
+  {
+    "category": "law",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2577.0450420095585,
+    "question_id": 1472,
+    "answer": "J"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 657.7497080143075,
+    "question_id": 2070,
+    "answer": "F"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_stem",
+    "correct": false,
+    "latency_ms": 1276.0287089913618,
+    "question_id": 2228,
+    "answer": "J"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 557.004541013157,
+    "question_id": 2092,
+    "answer": "E"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 634.4714170263615,
+    "question_id": 2380,
+    "answer": "F"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1441.4512089861091,
+    "question_id": 2275,
+    "answer": "B"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 503.8959170051385,
+    "question_id": 2457,
+    "answer": "A"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 535.5063330207486,
+    "question_id": 2648,
+    "answer": "D"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 1508.4957919898443,
+    "question_id": 2364,
+    "answer": "B"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 871.1005839868449,
+    "question_id": 2156,
+    "answer": "A"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1442.672584002139,
+    "question_id": 2370,
+    "answer": "G"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 661.9802500063088,
+    "question_id": 2354,
+    "answer": "D"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 663.4230830240995,
+    "question_id": 2204,
+    "answer": "D"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 1244.5237500069197,
+    "question_id": 2684,
+    "answer": "F"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 1043.8292500039097,
+    "question_id": 2264,
+    "answer": "G"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 944.7048750007525,
+    "question_id": 2719,
+    "answer": "D"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 384.2963749775663,
+    "question_id": 2699,
+    "answer": "C"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 584.3370000075083,
+    "question_id": 2661,
+    "answer": "B"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_stem",
+    "correct": false,
+    "latency_ms": 1544.9054580240045,
+    "question_id": 2062,
+    "answer": "C"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 639.5243330043741,
+    "question_id": 2617,
+    "answer": "C"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 630.5568749958184,
+    "question_id": 2165,
+    "answer": "G"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 1213.485332991695,
+    "question_id": 2539,
+    "answer": "E"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1198.1635830015875,
+    "question_id": 2748,
+    "answer": "F"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2327.610458014533,
+    "question_id": 2240,
+    "answer": "H"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 268.5120419773739,
+    "question_id": 2157,
+    "answer": "H"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 607.294457993703,
+    "question_id": 2466,
+    "answer": "E"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 554.5035830000415,
+    "question_id": 2379,
+    "answer": "I"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 545.1281249988824,
+    "question_id": 2267,
+    "answer": "C"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 2374.622041010298,
+    "question_id": 2653,
+    "answer": "G"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1268.3988750213757,
+    "question_id": 2704,
+    "answer": "H"
+  },
+  {
+    "category": "psychology",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 639.4258750078734,
+    "question_id": 2563,
+    "answer": "I"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 2893.0652910203207,
+    "question_id": 3030,
+    "answer": "A"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 1167.0703340205364,
+    "question_id": 3510,
+    "answer": "G"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1100.7822079991456,
+    "question_id": 3140,
+    "answer": "A"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 541.0299590148497,
+    "question_id": 2863,
+    "answer": "H"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1239.131082984386,
+    "question_id": 3040,
+    "answer": "C"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 3346.1975840036757,
+    "question_id": 2838,
+    "answer": "A"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1913.7271250074264,
+    "question_id": 3131,
+    "answer": "E"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 929.8425829911139,
+    "question_id": 3219,
+    "answer": "B"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 2480.0922090071253,
+    "question_id": 3080,
+    "answer": "A"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 989.9188750132453,
+    "question_id": 2873,
+    "answer": "I"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 949.1419589903671,
+    "question_id": 3022,
+    "answer": "A"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 667.9723749984987,
+    "question_id": 3389,
+    "answer": "C"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 916.0469580092467,
+    "question_id": 3130,
+    "answer": "E"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 819.3067499960307,
+    "question_id": 3023,
+    "answer": "F"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 1371.3685830007307,
+    "question_id": 3480,
+    "answer": "I"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 1182.8528339974582,
+    "question_id": 3320,
+    "answer": "D"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 415.76104098930955,
+    "question_id": 3214,
+    "answer": "A"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1600.7782919914462,
+    "question_id": 3467,
+    "answer": "D"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1701.6356670064852,
+    "question_id": 3278,
+    "answer": "F"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1082.3077500099316,
+    "question_id": 2952,
+    "answer": "H"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1286.088208988076,
+    "question_id": 3077,
+    "answer": "E"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1244.183625007281,
+    "question_id": 2948,
+    "answer": "I"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1119.767750002211,
+    "question_id": 3058,
+    "answer": "J"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 806.0722080117557,
+    "question_id": 3383,
+    "answer": "J"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1542.6141250063665,
+    "question_id": 3360,
+    "answer": "E"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 976.9111250061542,
+    "question_id": 3075,
+    "answer": "J"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 2422.8358330146875,
+    "question_id": 3407,
+    "answer": "D"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 1650.5586249986663,
+    "question_id": 3247,
+    "answer": "D"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1333.9637499884702,
+    "question_id": 3406,
+    "answer": "D"
+  },
+  {
+    "category": "biology",
+    "expected_decision": "route_science",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 457.7587909880094,
+    "question_id": 3217,
+    "answer": "B"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 2475.8320830005687,
+    "question_id": 4273,
+    "answer": "H"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 888.3661669970024,
+    "question_id": 3977,
+    "answer": "D"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1259.9754999973811,
+    "question_id": 3811,
+    "answer": "A"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1414.0801250177901,
+    "question_id": 4580,
+    "answer": "B"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1219.3410829931963,
+    "question_id": 4547,
+    "answer": "I"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 2750.331957999151,
+    "question_id": 3714,
+    "answer": "G"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1531.9405829941388,
+    "question_id": 3622,
+    "answer": "D"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1500.4534579929896,
+    "question_id": 3752,
+    "answer": "C"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 2025.2315000107046,
+    "question_id": 3841,
+    "answer": "A"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 916.2367920216639,
+    "question_id": 3855,
+    "answer": "C"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 4893.471124989446,
+    "question_id": 4397,
+    "answer": "H"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1282.9503340180963,
+    "question_id": 3656,
+    "answer": "B"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1467.0932079898193,
+    "question_id": 4320,
+    "answer": "H"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1129.6959169849288,
+    "question_id": 4313,
+    "answer": "F"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1119.7240419860464,
+    "question_id": 4495,
+    "answer": "A"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 3648.1356669974048,
+    "question_id": 4620,
+    "answer": "I"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_stem",
+    "correct": false,
+    "latency_ms": 1497.7853340096772,
+    "question_id": 4044,
+    "answer": "I"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1255.7609170034993,
+    "question_id": 3549,
+    "answer": "H"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1149.312291003298,
+    "question_id": 3762,
+    "answer": "B"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 805.1635000156239,
+    "question_id": 4636,
+    "answer": "J"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 569.0276669920422,
+    "question_id": 4076,
+    "answer": "G"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 500.5790410214104,
+    "question_id": 4228,
+    "answer": "I"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 453.4767080040183,
+    "question_id": 3756,
+    "answer": "A"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 846.1197089927737,
+    "question_id": 4132,
+    "answer": "I"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 546.8120830191765,
+    "question_id": 4424,
+    "answer": "C"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 967.2222920053173,
+    "question_id": 3851,
+    "answer": "G"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_stem",
+    "correct": false,
+    "latency_ms": 1093.9648330095224,
+    "question_id": 4465,
+    "answer": "E"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1246.1054579762276,
+    "question_id": 3532,
+    "answer": "A"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1499.5283340103924,
+    "question_id": 4069,
+    "answer": "J"
+  },
+  {
+    "category": "chemistry",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1082.6027499861084,
+    "question_id": 4562,
+    "answer": "D"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1190.1911669992842,
+    "question_id": 4762,
+    "answer": "C"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 568.6680000217166,
+    "question_id": 4935,
+    "answer": "G"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1612.838750006631,
+    "question_id": 4723,
+    "answer": "G"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 194.6021670009941,
+    "question_id": 4996,
+    "answer": "B"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1960.474499996053,
+    "question_id": 4828,
+    "answer": "F"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 881.8139999930281,
+    "question_id": 5003,
+    "answer": "C"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 3523.5830000019632,
+    "question_id": 4987,
+    "answer": "B"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2448.8180420012213,
+    "question_id": 4774,
+    "answer": "C"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2131.738833995769,
+    "question_id": 4747,
+    "answer": "G"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 595.0946249940898,
+    "question_id": 4867,
+    "answer": "E"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1942.0770420110784,
+    "question_id": 4751,
+    "answer": "G"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1854.244583984837,
+    "question_id": 4952,
+    "answer": "A"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2375.6649999995716,
+    "question_id": 4947,
+    "answer": "J"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 579.8845000099391,
+    "question_id": 4669,
+    "answer": "D"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 3065.404207998654,
+    "question_id": 4982,
+    "answer": "D"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 784.9227910046466,
+    "question_id": 4841,
+    "answer": "D"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 851.3760839996394,
+    "question_id": 4926,
+    "answer": "D"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2816.1797909997404,
+    "question_id": 4678,
+    "answer": "J"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1458.7889169924892,
+    "question_id": 4726,
+    "answer": "C"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1329.8880840011407,
+    "question_id": 4861,
+    "answer": "F"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1721.4308330148924,
+    "question_id": 4833,
+    "answer": "C"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 3624.8697910050396,
+    "question_id": 4795,
+    "answer": "D"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1372.1555419906508,
+    "question_id": 4698,
+    "answer": "H"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 2075.531333015533,
+    "question_id": 4796,
+    "answer": "I"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1141.8389999889769,
+    "question_id": 4966,
+    "answer": "I"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 572.17045899597,
+    "question_id": 4709,
+    "answer": "A"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 914.5612919819541,
+    "question_id": 4712,
+    "answer": "A"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 3821.9405410054605,
+    "question_id": 5052,
+    "answer": "H"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1343.054500001017,
+    "question_id": 4924,
+    "answer": "I"
+  },
+  {
+    "category": "history",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1089.3721659958828,
+    "question_id": 4704,
+    "answer": "H"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 575.7702910050284,
+    "question_id": 5854,
+    "answer": "A"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 540.1715000043623,
+    "question_id": 5612,
+    "answer": "G"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 1050.0362499733455,
+    "question_id": 5860,
+    "answer": "H"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "default-route",
+    "correct": true,
+    "latency_ms": 645.2537500008475,
+    "question_id": 5188,
+    "answer": "G"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 855.841042008251,
+    "question_id": 5191,
+    "answer": "I"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "default-route",
+    "correct": true,
+    "latency_ms": 978.94983398146,
+    "question_id": 5748,
+    "answer": "J"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "default-route",
+    "correct": true,
+    "latency_ms": 253.0004580039531,
+    "question_id": 5552,
+    "answer": "E"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 897.6989169896115,
+    "question_id": 5630,
+    "answer": "D"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 585.3009159909561,
+    "question_id": 5229,
+    "answer": "A"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "default-route",
+    "correct": true,
+    "latency_ms": 204.90625000093132,
+    "question_id": 5331,
+    "answer": "D"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 796.3985420065001,
+    "question_id": 5607,
+    "answer": "H"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 1048.308208992239,
+    "question_id": 5970,
+    "answer": "B"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "default-route",
+    "correct": true,
+    "latency_ms": 229.8524169891607,
+    "question_id": 5693,
+    "answer": "F"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 816.9668750197161,
+    "question_id": 5497,
+    "answer": "J"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "default-route",
+    "correct": true,
+    "latency_ms": 249.52729101642035,
+    "question_id": 5276,
+    "answer": "H"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 529.9557920079678,
+    "question_id": 5620,
+    "answer": "I"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 1109.6599999873433,
+    "question_id": 5849,
+    "answer": "H"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_stem",
+    "correct": false,
+    "latency_ms": 692.3777920019347,
+    "question_id": 5822,
+    "answer": "J"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "default-route",
+    "correct": true,
+    "latency_ms": 838.0047079990618,
+    "question_id": 5779,
+    "answer": "D"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 814.371000014944,
+    "question_id": 5265,
+    "answer": "I"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 1124.772583018057,
+    "question_id": 5805,
+    "answer": "I"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "default-route",
+    "correct": true,
+    "latency_ms": 423.2039589842316,
+    "question_id": 5380,
+    "answer": "B"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 1041.0236669995356,
+    "question_id": 5472,
+    "answer": "C"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "default-route",
+    "correct": true,
+    "latency_ms": 613.2847920234781,
+    "question_id": 5760,
+    "answer": "F"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 2387.227041996084,
+    "question_id": 5738,
+    "answer": "F"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "default-route",
+    "correct": true,
+    "latency_ms": 410.60762500273995,
+    "question_id": 5444,
+    "answer": "E"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 2797.5064579804894,
+    "question_id": 5513,
+    "answer": "A"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 566.0907909914386,
+    "question_id": 5998,
+    "answer": "B"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 1044.0719999896828,
+    "question_id": 5596,
+    "answer": "H"
+  },
+  {
+    "category": "other",
+    "expected_decision": "default-route",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 873.1385420251172,
+    "question_id": 5527,
+    "answer": "H"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 634.9706250184681,
+    "question_id": 6126,
+    "answer": "I"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 511.50016600149684,
+    "question_id": 6257,
+    "answer": "F"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 500.9918749856297,
+    "question_id": 6234,
+    "answer": "I"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 441.56266600475647,
+    "question_id": 6067,
+    "answer": "A"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 881.066041009035,
+    "question_id": 6351,
+    "answer": "H"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 497.3635420028586,
+    "question_id": 6022,
+    "answer": "E"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 627.5543329829816,
+    "question_id": 6609,
+    "answer": "F"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 542.1729999943636,
+    "question_id": 6574,
+    "answer": "G"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 740.7241670007352,
+    "question_id": 6239,
+    "answer": "C"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_stem",
+    "correct": false,
+    "latency_ms": 1064.595708012348,
+    "question_id": 6229,
+    "answer": "E"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1135.9061670082156,
+    "question_id": 6008,
+    "answer": "G"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1248.9149580069352,
+    "question_id": 6074,
+    "answer": "E"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 569.8153749981429,
+    "question_id": 6732,
+    "answer": "F"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 555.9326250222512,
+    "question_id": 6653,
+    "answer": "H"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 584.5284170063678,
+    "question_id": 6062,
+    "answer": "E"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 1338.262292003492,
+    "question_id": 6238,
+    "answer": "F"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1049.2143330047838,
+    "question_id": 6071,
+    "answer": "I"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 1079.0404580184259,
+    "question_id": 6034,
+    "answer": "F"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 945.8968749968335,
+    "question_id": 6343,
+    "answer": "F"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 515.5671670217998,
+    "question_id": 6532,
+    "answer": "H"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 1059.4650830025785,
+    "question_id": 6247,
+    "answer": "E"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 589.4563749898225,
+    "question_id": 6290,
+    "answer": "C"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 738.9908750192262,
+    "question_id": 6692,
+    "answer": "I"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 565.7144169963431,
+    "question_id": 6503,
+    "answer": "C"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 498.04804200539365,
+    "question_id": 6223,
+    "answer": "J"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 800.9439590096008,
+    "question_id": 6559,
+    "answer": "J"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_science",
+    "correct": true,
+    "latency_ms": 849.6175420004874,
+    "question_id": 6138,
+    "answer": "D"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 717.1634999976959,
+    "question_id": 6748,
+    "answer": "D"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_stem",
+    "correct": false,
+    "latency_ms": 961.0331660078373,
+    "question_id": 6591,
+    "answer": "E"
+  },
+  {
+    "category": "health",
+    "expected_decision": "route_science",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 556.6271669813432,
+    "question_id": 6597,
+    "answer": "B"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 1219.787540991092,
+    "question_id": 7319,
+    "answer": "E"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 2208.343625010457,
+    "question_id": 7078,
+    "answer": "F"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1105.9498749964405,
+    "question_id": 7646,
+    "answer": "J"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1480.590665974887,
+    "question_id": 7669,
+    "answer": "E"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 944.8613749991637,
+    "question_id": 7249,
+    "answer": "J"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 1972.976875025779,
+    "question_id": 7022,
+    "answer": "J"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1605.8707500051241,
+    "question_id": 6923,
+    "answer": "B"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 577.269500005059,
+    "question_id": 6926,
+    "answer": "D"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 576.8655830179341,
+    "question_id": 7517,
+    "answer": "B"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 950.701542024035,
+    "question_id": 7275,
+    "answer": "E"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 871.7057090252638,
+    "question_id": 7193,
+    "answer": "A"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 898.3467909856699,
+    "question_id": 7267,
+    "answer": "I"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1253.0002499988768,
+    "question_id": 7253,
+    "answer": "A"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1401.4919160108548,
+    "question_id": 7313,
+    "answer": "E"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 543.0246250180062,
+    "question_id": 7589,
+    "answer": "C"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_humanities",
+    "correct": false,
+    "latency_ms": 1206.7636660067365,
+    "question_id": 6882,
+    "answer": "J"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1201.0138329933397,
+    "question_id": 7532,
+    "answer": "A"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_stem",
+    "correct": false,
+    "latency_ms": 1046.00983398268,
+    "question_id": 7512,
+    "answer": "J"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 909.0605409874115,
+    "question_id": 7503,
+    "answer": "F"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 655.4127499985043,
+    "question_id": 6927,
+    "answer": "E"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1269.82366698212,
+    "question_id": 6889,
+    "answer": "H"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1998.4500409918837,
+    "question_id": 7245,
+    "answer": "B"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 909.8472500045318,
+    "question_id": 7588,
+    "answer": "A"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 533.4259580122307,
+    "question_id": 7178,
+    "answer": "F"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1222.9805000242777,
+    "question_id": 7662,
+    "answer": "F"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 995.0612919928972,
+    "question_id": 6938,
+    "answer": "D"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1241.3077499950305,
+    "question_id": 7084,
+    "answer": "E"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 558.1981250143144,
+    "question_id": 7024,
+    "answer": "J"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 1626.1956670205109,
+    "question_id": 7389,
+    "answer": "I"
+  },
+  {
+    "category": "economics",
+    "expected_decision": "route_business",
+    "actual_decision": "route_business",
+    "correct": true,
+    "latency_ms": 908.4719580132514,
+    "question_id": 7293,
+    "answer": "H"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1614.8395409982186,
+    "question_id": 7974,
+    "answer": "A"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 1242.4443750060163,
+    "question_id": 8555,
+    "answer": "H"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 782.7975830005016,
+    "question_id": 8063,
+    "answer": "B"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 579.3750410084613,
+    "question_id": 8259,
+    "answer": "E"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1539.7551250061952,
+    "question_id": 8638,
+    "answer": "C"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1075.4480420146137,
+    "question_id": 8200,
+    "answer": "F"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 933.5954170092009,
+    "question_id": 7841,
+    "answer": "A"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 865.3397500165738,
+    "question_id": 8598,
+    "answer": "J"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 867.183374997694,
+    "question_id": 8819,
+    "answer": "J"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 1129.338957980508,
+    "question_id": 7887,
+    "answer": "F"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 1082.2130840097088,
+    "question_id": 7790,
+    "answer": "G"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 315.7487080025021,
+    "question_id": 9028,
+    "answer": "A"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 551.9240420253482,
+    "question_id": 8799,
+    "answer": "G"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 522.8939579974394,
+    "question_id": 7717,
+    "answer": "G"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1535.5177499877755,
+    "question_id": 7878,
+    "answer": "C"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 1132.9428339959122,
+    "question_id": 8173,
+    "answer": "D"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1133.8574579858687,
+    "question_id": 8027,
+    "answer": "F"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1300.6364589964505,
+    "question_id": 8523,
+    "answer": "H"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 709.8160419845954,
+    "question_id": 8685,
+    "answer": "D"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 231.98429198237136,
+    "question_id": 8676,
+    "answer": "A"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 847.7221250068396,
+    "question_id": 8125,
+    "answer": "C"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 570.5052500125021,
+    "question_id": 8512,
+    "answer": "F"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 597.8725829918403,
+    "question_id": 7807,
+    "answer": "H"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 682.1162500127684,
+    "question_id": 8024,
+    "answer": "C"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 785.8249580021948,
+    "question_id": 8467,
+    "answer": "C"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 681.2643329903949,
+    "question_id": 7691,
+    "answer": "B"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 882.9046669998206,
+    "question_id": 8490,
+    "answer": "I"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 1308.9770840015262,
+    "question_id": 8232,
+    "answer": "I"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 919.9737090093549,
+    "question_id": 8622,
+    "answer": "G"
+  },
+  {
+    "category": "math",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 720.1626669848338,
+    "question_id": 8274,
+    "answer": "B"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1491.9712920091115,
+    "question_id": 9913,
+    "answer": "J"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 2279.956166021293,
+    "question_id": 10193,
+    "answer": "H"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 896.8667500012089,
+    "question_id": 10045,
+    "answer": "F"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 867.9910419741645,
+    "question_id": 9361,
+    "answer": "E"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 579.6662920038216,
+    "question_id": 9432,
+    "answer": "G"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1627.6081249816343,
+    "question_id": 9652,
+    "answer": "H"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 1831.718458008254,
+    "question_id": 9489,
+    "answer": "C"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 2532.765832991572,
+    "question_id": 9163,
+    "answer": "I"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 460.315417003585,
+    "question_id": 10241,
+    "answer": "G"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1085.4070839995984,
+    "question_id": 10163,
+    "answer": "F"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 879.4777499861084,
+    "question_id": 9168,
+    "answer": "D"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 2233.451457985211,
+    "question_id": 9687,
+    "answer": "G"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 994.6548330190126,
+    "question_id": 9161,
+    "answer": "A"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 1112.2184169944376,
+    "question_id": 9146,
+    "answer": "D"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 611.6695000091568,
+    "question_id": 10252,
+    "answer": "F"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 877.3309579992201,
+    "question_id": 10025,
+    "answer": "H"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 1011.0670830181334,
+    "question_id": 10079,
+    "answer": "I"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 724.0386659977958,
+    "question_id": 10140,
+    "answer": "H"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 651.4263330027461,
+    "question_id": 9366,
+    "answer": "F"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 3324.750916013727,
+    "question_id": 9160,
+    "answer": "D"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1295.8412079897244,
+    "question_id": 10091,
+    "answer": "H"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 1349.4760419998784,
+    "question_id": 9208,
+    "answer": "F"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 627.2580420190934,
+    "question_id": 9424,
+    "answer": "J"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 699.8350420035422,
+    "question_id": 9184,
+    "answer": "D"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 1391.01487500011,
+    "question_id": 10274,
+    "answer": "I"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 480.4183749947697,
+    "question_id": 9183,
+    "answer": "H"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 4297.164584015263,
+    "question_id": 9525,
+    "answer": "J"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 1169.857790984679,
+    "question_id": 9872,
+    "answer": "G"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 859.3269589764532,
+    "question_id": 9289,
+    "answer": "B"
+  },
+  {
+    "category": "physics",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 1629.2442499834578,
+    "question_id": 10221,
+    "answer": "D"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 1184.5667080197018,
+    "question_id": 10485,
+    "answer": "I"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 1457.5344169861637,
+    "question_id": 10659,
+    "answer": "C"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 634.0550839959178,
+    "question_id": 10667,
+    "answer": "D"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 4377.808750024997,
+    "question_id": 10376,
+    "answer": "A"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 1149.5215839822777,
+    "question_id": 10680,
+    "answer": "I"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 493.9815830148291,
+    "question_id": 10399,
+    "answer": "B"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_stem",
+    "correct": false,
+    "latency_ms": 1137.1279160084669,
+    "question_id": 10574,
+    "answer": "D"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 541.432750003878,
+    "question_id": 10700,
+    "answer": "C"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 1337.2076669766102,
+    "question_id": 10661,
+    "answer": "G"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 2295.3357079823036,
+    "question_id": 10651,
+    "answer": "H"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 1327.2532089904416,
+    "question_id": 10629,
+    "answer": "F"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 575.8237090194598,
+    "question_id": 10521,
+    "answer": "C"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 925.5290000000969,
+    "question_id": 10492,
+    "answer": "F"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_stem",
+    "correct": false,
+    "latency_ms": 1471.3505420077126,
+    "question_id": 10463,
+    "answer": "H"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 1165.1226250105537,
+    "question_id": 10706,
+    "answer": "E"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 1141.5975000127219,
+    "question_id": 10730,
+    "answer": "D"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 635.3837919887155,
+    "question_id": 10520,
+    "answer": "D"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_stem",
+    "correct": false,
+    "latency_ms": 1049.5565840101335,
+    "question_id": 10481,
+    "answer": "I"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 1088.3829170197714,
+    "question_id": 10494,
+    "answer": "D"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 4008.35629098583,
+    "question_id": 10562,
+    "answer": "B"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 1241.8015419971198,
+    "question_id": 10426,
+    "answer": "E"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_stem",
+    "correct": false,
+    "latency_ms": 5769.3294170021545,
+    "question_id": 10707,
+    "answer": "D"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 781.1842499941122,
+    "question_id": 10694,
+    "answer": "I"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 636.9673339941073,
+    "question_id": 10512,
+    "answer": "B"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 1055.5925840162672,
+    "question_id": 10594,
+    "answer": "E"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 1305.9667919878848,
+    "question_id": 10748,
+    "answer": "F"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 259.87287500174716,
+    "question_id": 10395,
+    "answer": "H"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 1498.4357500215992,
+    "question_id": 10360,
+    "answer": "C"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_cs",
+    "correct": true,
+    "latency_ms": 2328.9964580035303,
+    "question_id": 10681,
+    "answer": "I"
+  },
+  {
+    "category": "computer science",
+    "expected_decision": "route_cs",
+    "actual_decision": "route_stem",
+    "correct": false,
+    "latency_ms": 608.8252089975867,
+    "question_id": 10650,
+    "answer": "D"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 994.2174589959905,
+    "question_id": 10828,
+    "answer": "G"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 1410.9957920154557,
+    "question_id": 10813,
+    "answer": "G"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 546.8155000125989,
+    "question_id": 11056,
+    "answer": "A"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1041.6787920112256,
+    "question_id": 10886,
+    "answer": "F"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1075.9058330149855,
+    "question_id": 11040,
+    "answer": "D"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1068.8667499925941,
+    "question_id": 10912,
+    "answer": "I"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 479.51341699808836,
+    "question_id": 10844,
+    "answer": "J"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 683.6409170064144,
+    "question_id": 11262,
+    "answer": "B"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 992.065458005527,
+    "question_id": 10955,
+    "answer": "D"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1138.8157909968868,
+    "question_id": 11236,
+    "answer": "E"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1010.633208003128,
+    "question_id": 10811,
+    "answer": "B"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 628.3758750068955,
+    "question_id": 11235,
+    "answer": "J"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 1492.7506250096485,
+    "question_id": 10902,
+    "answer": "A"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 578.975000011269,
+    "question_id": 10967,
+    "answer": "A"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 665.6725000066217,
+    "question_id": 10922,
+    "answer": "I"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 1081.227459013462,
+    "question_id": 10857,
+    "answer": "H"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 607.3863329947926,
+    "question_id": 11004,
+    "answer": "A"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 620.4842919833027,
+    "question_id": 11211,
+    "answer": "F"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_business",
+    "correct": false,
+    "latency_ms": 616.6126249881927,
+    "question_id": 11059,
+    "answer": "B"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 562.3656250245403,
+    "question_id": 11145,
+    "answer": "A"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 426.3154999935068,
+    "question_id": 10931,
+    "answer": "A"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 977.9135410208255,
+    "question_id": 11094,
+    "answer": "H"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 556.7107500100974,
+    "question_id": 11198,
+    "answer": "D"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_cs",
+    "correct": false,
+    "latency_ms": 1170.171665988164,
+    "question_id": 11118,
+    "answer": "G"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 449.2541670042556,
+    "question_id": 11051,
+    "answer": "B"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 280.0370840122923,
+    "question_id": 10778,
+    "answer": "E"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 279.7914999828208,
+    "question_id": 11125,
+    "answer": "D"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 562.4130420037545,
+    "question_id": 11203,
+    "answer": "C"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 1662.3757909983397,
+    "question_id": 11064,
+    "answer": "A"
+  },
+  {
+    "category": "philosophy",
+    "expected_decision": "route_humanities",
+    "actual_decision": "route_humanities",
+    "correct": true,
+    "latency_ms": 428.6167919926811,
+    "question_id": 10930,
+    "answer": "D"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 1486.703333008336,
+    "question_id": 12242,
+    "answer": "A"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 896.8595830083359,
+    "question_id": 11967,
+    "answer": "B"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1146.5277080133092,
+    "question_id": 11392,
+    "answer": "J"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 2139.7307090228423,
+    "question_id": 12249,
+    "answer": "D"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 535.9858750016429,
+    "question_id": 12187,
+    "answer": "B"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 594.7617909987457,
+    "question_id": 11423,
+    "answer": "E"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1231.219917011913,
+    "question_id": 11557,
+    "answer": "C"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 1448.5802080016583,
+    "question_id": 11404,
+    "answer": "H"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 597.0997079857625,
+    "question_id": 12199,
+    "answer": "D"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 2932.2221250040457,
+    "question_id": 11395,
+    "answer": "B"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 910.0993330066558,
+    "question_id": 12048,
+    "answer": "J"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 992.9269169806503,
+    "question_id": 11853,
+    "answer": "F"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 1704.0944580221549,
+    "question_id": 11445,
+    "answer": "A"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1540.6353330181446,
+    "question_id": 11565,
+    "answer": "F"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1029.7694170149043,
+    "question_id": 11575,
+    "answer": "C"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 851.7557499872055,
+    "question_id": 11907,
+    "answer": "I"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 480.525042017689,
+    "question_id": 11502,
+    "answer": "C"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1182.6669170113746,
+    "question_id": 12022,
+    "answer": "E"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 624.1308330208994,
+    "question_id": 11638,
+    "answer": "A"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_science",
+    "correct": false,
+    "latency_ms": 2838.928249984747,
+    "question_id": 11495,
+    "answer": "A"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 2033.9762920048088,
+    "question_id": 11991,
+    "answer": "C"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 869.4665000075474,
+    "question_id": 11937,
+    "answer": "I"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 2815.677249978762,
+    "question_id": 12161,
+    "answer": "J"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 984.6079170238227,
+    "question_id": 11804,
+    "answer": "H"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "default-route",
+    "correct": false,
+    "latency_ms": 899.7814170143101,
+    "question_id": 11787,
+    "answer": "C"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1084.5128749788273,
+    "question_id": 11544,
+    "answer": "B"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1225.7301659847144,
+    "question_id": 12215,
+    "answer": "A"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1251.6842499899212,
+    "question_id": 12217,
+    "answer": "G"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1571.3511669891886,
+    "question_id": 12154,
+    "answer": "E"
+  },
+  {
+    "category": "engineering",
+    "expected_decision": "route_stem",
+    "actual_decision": "route_stem",
+    "correct": true,
+    "latency_ms": 1392.905749991769,
+    "question_id": 11337,
+    "answer": "I"
+  }
+]
