@@ -1,0 +1,179 @@
+version: "1"
+
+listeners:
+  - name: "http-listener"
+    address: "0.0.0.0"
+    port: 8899
+    protocol: "http"
+
+classifier:
+  category_model:
+    model_id: "models/mmbert32k-intent-classifier-merged"
+    use_mmbert_32k: true
+    threshold: 0.5
+    use_cpu: true
+    category_mapping_path: "models/mmbert32k-intent-classifier-merged/category_mapping.json"
+  pii_model:
+    model_id: "models/mmbert32k-pii-detector-merged"
+    use_mmbert_32k: true
+    threshold: 0.9
+    use_cpu: true
+    pii_mapping_path: "models/mmbert32k-pii-detector-merged/pii_type_mapping.json"
+  preference_model:
+    use_contrastive: true
+    embedding_model: "mmbert"
+
+signals:
+  domains:
+    - name: "stem"
+      description: "Mathematics, physics, and engineering"
+      mmlu_categories: ["math", "physics", "engineering"]
+    - name: "cs"
+      description: "Computer science"
+      mmlu_categories: ["computer science"]
+    - name: "science"
+      description: "Biology, chemistry, and health"
+      mmlu_categories: ["biology", "chemistry", "health"]
+    - name: "humanities"
+      description: "Law, history, philosophy, and psychology"
+      mmlu_categories: ["law", "history", "philosophy", "psychology"]
+    - name: "business"
+      description: "Economics and business"
+      mmlu_categories: ["economics", "business"]
+
+decisions:
+  - name: "route_stem"
+    description: "Route math, physics, and engineering questions"
+    priority: 160
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "domain"
+          name: "stem"
+    modelRefs:
+      - model: "google/gemma-3-27b-it"
+        use_reasoning: false
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are a mathematics, physics, and engineering tutor. Answer with concise, technically correct reasoning."
+
+  - name: "route_cs"
+    description: "Route computer science questions"
+    priority: 160
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "domain"
+          name: "cs"
+    modelRefs:
+      - model: "google/gemma-3-27b-it"
+        use_reasoning: false
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are a computer science expert. Answer with precise algorithmic and programming knowledge."
+
+  - name: "route_science"
+    description: "Route biology, chemistry, and health questions"
+    priority: 160
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "domain"
+          name: "science"
+    modelRefs:
+      - model: "google/gemma-3-27b-it"
+        use_reasoning: false
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are a science tutor specializing in biology, chemistry, and health. Answer clearly and accurately."
+
+  - name: "route_humanities"
+    description: "Route law, history, philosophy, and psychology questions"
+    priority: 160
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "domain"
+          name: "humanities"
+    modelRefs:
+      - model: "google/gemma-3-27b-it"
+        use_reasoning: false
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are a humanities expert for law, history, philosophy, and psychology. Answer with clear explanation and context."
+
+  - name: "route_business"
+    description: "Route economics and business questions"
+    priority: 160
+    rules:
+      operator: "OR"
+      conditions:
+        - type: "domain"
+          name: "business"
+    modelRefs:
+      - model: "deepseek-ai/deepseek-v3.1-terminus"
+        use_reasoning: false
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "You are an economics and business expert. Answer with sound economic and managerial reasoning."
+
+  - name: "default-route"
+    description: "Catch-all route when no subject route matches"
+    priority: 50
+    rules:
+      operator: "AND"
+      conditions: []
+    modelRefs:
+      - model: "google/gemma-3-27b-it"
+        use_reasoning: false
+    plugins:
+      - type: "system_prompt"
+        configuration:
+          system_prompt: "Answer helpfully and concisely."
+
+embedding_models:
+  mmbert_model_path: "models/mom-embedding-ultra"
+  use_cpu: true
+  hnsw_config:
+    model_type: "mmbert"
+    preload_embeddings: true
+    target_dimension: 768
+    target_layer: 22
+    enable_soft_matching: true
+    min_score_threshold: 0.5
+
+# providers:
+#   models:
+#     - name: "qwen2.5:3b"
+#       endpoints:
+#         - name: "endpoint1"
+#           endpoint: "host.docker.internal:8002"
+#           protocol: "http"
+#           weight: 1
+#       default_model: "qwen2.5:3b"
+#   default_model: "qwen2.5:3b"
+
+providers:
+  models:
+    - name: "deepseek-ai/deepseek-v3.1-terminus"
+      access_key: "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"
+      endpoints:
+        - name: "nvidia-nim"
+          weight: 1
+          endpoint: "integrate.api.nvidia.com"
+          protocol: "https"
+
+    - name: "google/gemma-3-27b-it"
+      access_key: "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"
+      endpoints:
+        - name: "nvidia-nim"
+          weight: 1
+          endpoint: "integrate.api.nvidia.com"
+          protocol: "https"
+
+  default_model: "google/gemma-3-27b-it"
