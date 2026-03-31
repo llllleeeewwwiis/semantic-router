@@ -161,7 +161,7 @@ embedding_models:
 providers:
   models:
     - name: "deepseek-ai/deepseek-v3.1-terminus"
-      access_key: "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"
+      access_key: "your-access-key"
       endpoints:
         - name: "nvidia-nim"
           weight: 1
@@ -169,7 +169,7 @@ providers:
           protocol: "https"
 
     - name: "google/gemma-3-27b-it"
-      access_key: "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"
+      access_key: "your-access-key"
       endpoints:
         - name: "nvidia-nim"
           weight: 1
