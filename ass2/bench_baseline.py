@@ -10,19 +10,19 @@ KEYWORD_PAYLOAD = {
     "max_tokens": 1, "stream": False
 }
 
-# 路径 B: 命中 Preference（纯 ML 推理路径）
-PREFERENCE_PAYLOAD = {
-    "model": "MoM",
-    "messages": [{"role": "user", "content": "Write a Python function to implement quicksort"}],
-    "max_tokens": 1, "stream": False
-}
+# # 路径 B: 命中 Preference（纯 ML 推理路径）
+# PREFERENCE_PAYLOAD = {
+#     "model": "MoM",
+#     "messages": [{"role": "user", "content": "Write a Python function to implement quicksort"}],
+#     "max_tokens": 1, "stream": False
+# }
 
-# 路径 C: 走 default-route（MMLU-Pro 学术问题，keyword 和 preference 都不命中）
-DEFAULT_PAYLOAD = {
-    "model": "MoM",
-    "messages": [{"role": "user", "content": "What is the acceleration due to gravity on Earth?"}],
-    "max_tokens": 1, "stream": False
-}
+# # 路径 C: 走 default-route（MMLU-Pro 学术问题，keyword 和 preference 都不命中）
+# DEFAULT_PAYLOAD = {
+#     "model": "MoM",
+#     "messages": [{"role": "user", "content": "What is the acceleration due to gravity on Earth?"}],
+#     "max_tokens": 1, "stream": False
+# }
 
 async def bench(session, payload, n=100):
     latencies = []
@@ -39,8 +39,8 @@ async def bench(session, payload, n=100):
 async def main():
     payloads = [
         ("Keyword 路径 (urgent_request)",  KEYWORD_PAYLOAD),
-        ("Preference 路径 (code_gen)",     PREFERENCE_PAYLOAD),
-        ("Default 路径 (学术问题)",         DEFAULT_PAYLOAD),
+        # ("Preference 路径 (code_gen)",     PREFERENCE_PAYLOAD),
+        # ("Default 路径 (学术问题)",         DEFAULT_PAYLOAD),
     ]
     async with aiohttp.ClientSession() as session:
         print(f"{'路径':<30} {'p50(ms)':>10} {'p95(ms)':>10} {'p99(ms)':>10} {'mean(ms)':>10}")
